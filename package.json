@@ -1,0 +1,21 @@
+{
+  "name": "playwright-api-framework",
+  "version": "1.0.0",
+  "description": "Enterprise-grade data-driven API test automation framework using Playwright, TypeScript, Excel, and .env secret resolution.",
+  "private": true,
+  "scripts": {
+    "generate-tests": "tsc --project tsconfig.json && node dist/src/setup/generateTestFiles.js",
+    "test:api": "npm run generate-tests && playwright test",
+    "report": "playwright show-report Reports/html-report",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.47.0",
+    "@types/node": "^22.5.0",
+    "typescript": "^5.6.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "xlsx": "^0.18.5"
+  }
+}
